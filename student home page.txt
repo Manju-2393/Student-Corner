@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+<style>
+    label{
+    color:white;
+    font-size:2em;
+}
+        body{
+            background-image:url(documents/img.jpg);
+            background-repeat: no-repeat;
+            background-position: right top;
+        }
+
+.span{
+    position:relative;
+    font-size:2em;
+    letter-spacing:5px;
+   color:transparent; animation:animate 0.8s linear infinite;
+}
+body{
+    background-color:black;
+}
+
+@keyframes animate
+{
+    0%,18%,20%,50%,65%,80%,90%,92{
+        color:transparent;
+        text-shadow:none;
+    }
+    18.1%,20.1%,48.1%,65.1%,79.1%,90.1%,100%{
+        color:white;
+        text-shadow:0 0 10px #03bcf4;
+    }
+}
+.hi{
+    margin-left:40px;
+    background-color:black;
+    border-bottom:2px solid #03bcf4;
+    color:white;
+}
+.loginlogoutlink-logout{
+    text-decoration:none;
+    font-size:30px;
+    color:#03bcf4;
+    
+}
+.loginlogoutlink-logout:hover{
+    color:black;
+    background-color:#03bcf4;
+    transition:0.3s;
+    border-radius:10px;
+}
+.up{
+    color:#03bcf4;
+    background-color:black;
+    border-radius:10px;
+    height:50px;
+    width:70px;
+}
+.up:hover{
+    transition:0.3s;
+    color:black;
+    background-color:#03bcf4;box-shadow:0 0 10px #03bcf4;
+    
+}
+.go:hover{
+transition:0.3s;
+color:white;
+box-shadow:0 0 10px #f17720;
+}
+
+    </style>
+<meta charset="ISO-8859-1">
+<title>Student home page</title>
+</head>
+<body class='body'><p class='span'>
+<form id='form1' method="post" action="pdf.jsp">
+<table><tr>
+<td style="position:absolute;left:20px;top:40%;width:80%;"><label style="color:white;margin-left:30%;font-size:30px;">Branch</label>
+<select id='branch' name='branch' style="margin-left:20px;background-color:#03bcf4;height:40px;width:100px;padding:5px;border-radius:10px;border:2px solid black;">
+<option>Select</option>
+<option>CSE</option>
+<option>IT</option>
+<option>ECE</option>
+</select></br>
+<input type='submit' class="go" value='go' style="margin-left:450px;margin-top:30px;color:#f17720;background-color:transparent;border-radius:10px;border:2px solid #f17720;width:80px;height:60px;"/>
+</td><td style="width:20%;"></td></tr></table>
+</form>
+</body>
+</html>

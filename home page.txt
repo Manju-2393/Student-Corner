@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .hi{
+        margin-left:100px;
+        font-size:20px;
+        text-decoration:none;
+                border-radius:10px;
+        padding:10px;
+        background-color:transparent;
+        color:#f17720;
+        border:transparent;
+        
+    }
+    .hello{
+                margin-left:100px;
+        font-size:20px;
+        text-decoration:none;
+        color:white;
+        background-color:#f17720;
+        border-radius:10px;
+        padding:20px;
+    }
+    .hello:hover{
+        transition:0.3s;
+        box-shadow:0 0 10px #f17720;
+        
+    }
+    .hi:hover{
+        transition:0.3s;
+        color:white;
+        background-color:#f17720;
+                border-radius:10px;
+        padding:20px;
+    }
+    .hey{
+        text-decoration:none;
+        color:#f17720;
+        background-color:transparent;
+        margin-left:80px;
+        font-size:25px;
+        border:transparent;
+        border-radius:5px;
+       
+        
+    }
+    .hey:hover{
+        transition:0.2s;
+        top:-2;
+        color:#f17720;
+        border:2px solid #f17720;
+        border-radius:5px;
+        box-shadow:0 0 10px #f17720;
+        animation:animate 0.5s linear infinite;
+    }
+    @keyframes animate{
+        0%{
+            color:white;
+            background-color:#f17720;
+        }
+        100%{
+            color:#f17720;
+            background-color:transparent;
+            top:-2;
+        }
+    }
+    .sc{
+        color:#00a7e1;
+        font-size:30px;
+        text-shadow:0 0 1px black;
+        animation:hi 5s linear infinite;
+    }
+    @keyframes hi{
+        0%{
+            color:transparent;
+        }
+        100%{
+            color:white;
+        }
+    }
+
+    .td1,.td3{
+        width:20%;
+          background:linear-gradient(0deg,#000,#626262);
+        opacity:70%;
+        margin:0;
+    }
+    .td2{
+        background:linear-gradient(0deg,#000,#626262);
+        opacity:70%;
+        margin-left:0px;
+    }
+    .td{
+        background-image:url(documents/bggirlimg.jpg);
+        background-position: center ;
+        background-repeat: no-repeat;
+        
+        z-index:;
+    }
+    .km{
+         margin-left:10px;font-size:30px;text-decoration:none;color:white;background-color:#f17720;border-radius:10px;padding:5px;
+    }
+    .km:hover{
+        transition:0.3s;
+        color:#f17720;
+        background-color:white;
+        border:2px solid #f17720;
+    }
+    .abt,.si{
+        font-size:40px;
+        border-bottom:5px solid #f17720;
+    }
+    
+    .uni{
+        font-size:30px;
+        margin-top:50px;
+    }
+    .estu{
+        font-size:20px;
+    }
+</style>
+<meta charset="ISO-8859-1">
+<title>Home page</title>
+</head>
+<body>
+<nav><label class="sc">Student Corner</label><a href="home1.html" class="hi">Home</a>
+    <button class="hi" onclick="scrollFunction2()">About</button>
+    <button class="hi" onclick="scrollFunction3()">Contact</button>
+    <button class="hello" onclick="scrollFunction1()">Sign Up</button>
+    <button class="hey" onclick="scrollFunction4()">Student Log In</button>
+    <button class="hey" onclick="scrollFunction4()">Faculty Log In</button></nav>
+    <table style="width:100%;height:600px;margin-top:30px;" class="td">
+    <tr>
+        <td class="td1"> </td>
+        <td class="td2"><p style="opacity:200%;color:white;letter-spacing:3px;font-size:60px;margin-top:20px;animation:hi 3s linear infinite;">Ship is safe at the shore<br> but it's not what it's<br> built for...</p></td>
+        <td class="td3"></td></tr></table>
+    <div style="margin-top:30px;" >
+    <label class="abt">ABOUT</label>
+    <table>
+    <tr><td style="width:70%"><p style="font-size:25px;">While counties are at their different phases from Coronavirus Pandemic, more than 1.2 billion students in 186 countries are affected by schools and university closures. Most of the organization institutes roll out their calls from their online teaching.
+
+With this sudden shift away from the classroom in many parts of the globe, some wonder whether the adoption of online learning continues to persist post-pandemic and how much such a change would affect the worldwide educational sector.
+
+Even before COVID-19, there was already high growth and adoption in education technology, as the global EdTech investments reached $18.66 billion in 2019. The overall market for online education is projected to reach $350 billion by the end of 2025.
+
+Whether it is a language app, virtual classrooms, video conference rooms, or online learning software, there has been a massive surge in education technology since the Coronavirus outbreak.
+
+        <a href="about.html" class="km" id="el2">Know more</a></p></td><td style="width:30%;background-image:url(documents/studentimg.webp);border-radius:50%;"></td></tr></table></div>
+    <div><label class="si" >Sign Up</label><table style="background-color:#00a7e1;margin-top:10px;border-radius:10px;"><tr><td style="width:40%;"><img src="documents/signupimage.jpeg" style="padding:10px;border-radius:10px;"></td><td style="width:60%;"><p style="font-size:30px;color:white;letter-spacing:2px;">
+    We  would love to be in touch with you!!! please provide all the required details to register  yourselves. Forms that are not completely filled will not be accepted. All information is strictly confidential. 
+    It is not disclosed or shared without user's written consent.<a href="studentregistration.html" class="km" id="el1">Sign Up</a>
+        
+        </p></td></tr></table>
+    </div>
+    <div>
+    <label class="si" style="margin-left:90%" >Log In</label><table style="background-color:grey;width:100%;margin-top:30px;border-radius:10px;">
+    <tr><td style="width:60%;">
+        <p style="font-size:30px;letter--spacing:2px;color:black;padding:20px;border-radius:10px;">WELCOME BACK &#x1f609<br><br>
+        <b>Something for Everyone.</b><br><br>
+            If you already have an account SIGN IN and stay in touch with us.<br><br> We missed you...
+            
+        </p>        <a href="studentlogin.html" style="margin-left:20px;" class="km">Student Log In</a>
+        <a href="Facultylogin.html" class="km" id="el4">Faculty Log In</a></td><td style="width:40%;"><img src="documents/doorimage.jpeg" style="width:400px;margin-left:120px;border-radius:10px;"><br>
+
+        </td></tr></table>
+    </div>
+    <label style="margin-left:20px;color:black;border:transparent;border-bottom:5px solid #f17720;font-size:40px;" >Contact</label>
+    <footer style="background-color:black;border:1px solid black;border-radius:5px;margin-top:30px;">
+    <table style="width:100%;">
+        <tr>
+        <td style="width:33.33%;text-align:center;"><label style="margin-top:10px;"><b style="color:white;font-size:30px;border-bottom:3px solid white;">ADDRESS</b></label><br><span style="color:white;margin-top:20px;">9-57 wallstreet Manhattan New York</span></td><td style="width:33.33%;color:white;text-align:center;"><label style="margin-left:30px;font-size:30px; border-bottom:2px solid white;">Follow us</label><br>
+            <label class="uni">&#x1f4eb<span class="estu">studentcorner@gmail.com</span></label><br>
+            <label class="uni">&#x1f4de</label><span class="estu" id="el3">1-342-432-3425</span>
+            </td><td style="width:33.33%"></td>
+        </tr>
+        </table>
+    </footer>
+      <script>
+      function scrollFunction1() {
+        let e = document.getElementById("el1");
+        // This ends the block to the window
+        // bottom and also aligns the view to the center
+        e.scrollIntoView({
+          block: 'end',
+          behavior: 'smooth',
+          inline: 'center'
+        });
+      }
+      function scrollFunction2() {
+        let e = document.getElementById("el2");
+        // This ends the block to the window
+        // bottom and also aligns the view to the center
+        e.scrollIntoView({
+          block: 'end',
+          behavior: 'smooth',
+          inline: 'center'
+        });
+      }
+        function scrollFunction3() {
+        let e = document.getElementById("el3");
+        // This ends the block to the window
+        // bottom and also aligns the view to the center
+        e.scrollIntoView({
+          block: 'end',
+          behavior: 'smooth',
+          inline: 'center'
+        });
+      }      function scrollFunction4() {
+        let e = document.getElementById("el4");
+        // This ends the block to the window
+        // bottom and also aligns the view to the center
+        e.scrollIntoView({
+          block: 'end',
+          behavior: 'smooth',
+          inline: 'center'
+        });
+      }
+    </script>
+</body>
+</html>

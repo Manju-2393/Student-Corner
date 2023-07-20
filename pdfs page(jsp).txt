@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %> 
+<%@ page import="java.sql.SQLException" %>
+<%@ page import="project.Sqlconnection" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+try {
+	// Initialize the database
+   Connection con =Sqlconnection.Database();
+
+    // Create a SQL query to insert data into demo table
+    // demo table consists of two columns, so two '?' is used
+    PreparedStatement st = con
+           .prepareStatement("select * from material where branch=?");
+
+    
+    st.setString(1, request.getParameter("branch"));
+  
+ 
+    // Execute the insert command using executeUpdate()
+    // to make changes in database
+   ResultSet rst=st.executeQuery();
+   while(rst.next()){
+	   String variable = "documents/";
+	   variable = variable+rst.getString("material_name");
+     %>
+	   <table border='2'>
+	   <tr>
+	   <th>Material name</th>
+	   </tr>
+	   <tr>
+	    <td><a href="<%= variable %>"><%out.println(rst.getString("material_name"));%></a></td>
+	   </tr>
+	   </table>   
+	<%
+   
+   }
+    st.close();
+    con.close();
+
+    // Get a writer pointer 
+    // to display the successful result
+    
+    //response.sendRedirect("login.html");
+
+	  
+    		
+}
+catch (Exception e) {
+    e.printStackTrace();
+}
+%>
+</body>
+</html>

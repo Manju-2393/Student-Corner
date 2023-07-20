@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+label{
+    color:white;
+    font-size:2em;
+}
+
+.span{
+    position:relative;
+    font-size:2em;
+    letter-spacing:5px;
+   color:transparent; animation:animate 0.8s linear infinite;
+}
+body{
+    background-color:black;
+}
+@keyframes animate
+{
+    0%,18%,20%,50%,65%,80%,90%,92{
+        color:transparent;
+        text-shadow:none;
+    }
+    18.1%,20.1%,48.1%,65.1%,79.1%,90.1%,100%{
+        color:white;
+        text-shadow:0 0 10px #03bcf4;
+    }
+}
+.td1,.td3{
+    width:20%;
+}
+
+table{
+    width:100%;
+    margin-top:100px;
+}
+.td2{
+    border-radius:5px;
+    position:relative;
+    background:linear-gradient(0deg,#000,#262626);
+    border:3px solid #03bcf4;
+}
+
+.uname,.pwd{
+    margin-top:200px;
+}
+.un,.pn{
+    margin-left:30%;
+    margin-top:10px
+}
+.sn{
+    margin-left:50%;
+    margin-top:20px;
+}
+.iuname,.ipwd{
+    margin-left:20px;
+    background-color:transparent;
+    color:white;
+    border:transparent;
+    border-bottom: 2px solid #03e9f4;
+}
+.username,.password{
+    font-size:25px;
+}
+.ilog{
+    color:#03bcf4;
+    background-color:black;
+    border-radius:5px;
+   
+}
+.ilog:hover{
+    transition:0.3s;
+    color:black;
+    background-color:#03bcf4;
+    box-shadow:0 0 10px #03bcf4;
+   
+}
+.iuname:hover,.ipwd:hover{
+    transition:0.3s;
+    width:200px;
+}
+.pp{
+    margin-left:40%;
+}
+.pp a{
+    text-decoration:none;
+    color:#03bcf4;
+    text-shadow:0 0 7px #03bcf4;
+    border-bottom:2px solid white;
+}
+
+</style>
+<meta charset="ISO-8859-1">
+<title>Student login</title>
+    <link rel="stylesheet" href="studentloginpage.css">
+</head>
+<body class='bg'>
+<form id='form1' method="post" action="Studentloginservlet">
+<label>STUDENT <span class="span">Corner</span>
+    </label>
+<table>
+    <tr><td class="td1"></td><td class="td2"><div class="divv"><div class="un">
+<label class='username'>User name</label>
+<input type='text' id='uname' name='uname' class='iuname'/></div><div class="pn">
+<label class='password'>Password</label>
+<input type='text' id='pwd' name='pwd' class='ipwd'/></div><div class="sn">
+<input type='submit' value='login' class='ilog'/></div><br><p class='pp'><a href="studentregistration.html"><span class='te'> New here?click here to register</span></a>
+</p></div></td><td class="td3"></td></tr></table>
+</form>
+</body>
+</html>

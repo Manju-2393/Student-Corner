@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+label{
+    color:white;
+    font-size:2em;
+}
+
+.span{
+    position:relative;
+    font-size:2em;
+    letter-spacing:5px;
+   color:transparent; animation:animate 0.8s linear infinite;
+}
+body{
+    background-color:black;
+}
+
+@keyframes animate
+{
+    0%,18%,20%,50%,65%,80%,90%,92{
+        color:transparent;
+        text-shadow:none;
+    }
+    18.1%,20.1%,48.1%,65.1%,79.1%,90.1%,100%{
+        color:white;
+        text-shadow:0 0 10px #03bcf4;
+    }
+}
+.hi{
+    color:white;
+    background-color:transparent;
+    border:1px solid transparent;
+    border-bottom:3px solid #03e9f4;
+    margin-left:30px
+}
+.link{
+    margin-left:50%;
+    margin-top:5%;
+    color:#03bcf4;
+    background-color:black;
+    border:3px solid #03bcf4;
+    border-radius:5px;
+    width:80px;
+    height:40px;
+}
+.link:hover{
+    transition:0.3s;
+    background-color:#03bcf4;
+    color:black;
+    box-shadow:0 0 10px #03bcf4;
+   
+}
+.td2{
+    border:3px solid #03bcf4;
+    border-radius:7px;
+    background:linear-gradient(0deg,#000,#262626)
+}
+.hi:hover{
+    transition:0.3s;
+    width:180px;
+}
+.jj:hover{
+transition:0.3s;
+color:white;
+background-color:#03bcf4;
+}
+</style>
+    <link rel="stylesheet" href="studentregistrationpagecss.css">
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+<script type='text/javascript'>
+
+function validate(){
+ var firstname=document.getElementById("fname").value;
+var lastname=document.getElementById("lname").value;
+var username=document.getElementById("uname").value;
+var branch=document.getElementById('branch').value;
+var pwd=document.getElementById('pwd').value;
+var cpwd=document.getElementById('cpwd').value;
+var rollnumber=document.getElementById("rnum").value;
+
+if(firstname==""){
+document.getElementById("p1").innerHTML="<h6 style='color:red'>Please enter first name</h6>";
+return false;
+}
+if(lastname==""){
+document.getElementById("p1").innerHTML="<h6 style='color:red'>Please enter last name</h6>";
+return false;
+}
+if(username==""){
+document.getElementById("p1").innerHTML="<h6 style='color:red'>Please enter user name</h6>";
+return false;
+}
+if(pwd==""){
+document.getElementById("p1").innerHTML="<h6 style='color:red'>Please enter password</h6>";
+return false;
+
+}
+else{
+    if(pwd!=cpwd)
+{
+document.getElementById("p1").innerHTML="<h6 style='color:red'>Both the passwords are not equal</h6>";
+return false;
+}
+}
+if(branch=="Select"){
+document.getElementById("p1").innerHTML="<h6 style='color:red'>Please select branch</h6>";
+return false;
+}
+var gender="";
+var g=document.getElementsByName('gender');
+
+for(var i=0;i<g.length;i++){
+if(g[i].checked){
+gender=g[i].id;
+}
+}
+if(rollnumber==""){
+document.getElementById("p1").innerHTML="<h6 style='color:red'>Please enter roll numeber</h6>";
+return false;
+}
+if(gender==""){
+document.getElementById("p1").innerHTML="<h6 style='color:red'>Please select gender</h6>";
+return false;
+}
+else{
+document.getElementById("selectedgender").value=gender;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<form id='form1' method="post" action="Studentservlet">
+<label>STUDENT<span class="span">Corner</span></label>
+<div style="border:3px solid #03e9f4;border-radius:10px;margin-top:50px;">
+<div style="margin-top:50px;"><label style="margin-left:50px;">First Name</label>
+<input type='text' id='fname' name='fname' class='hi'/>
+<label style="margin-left:40%;">Last Name</label>
+<input type='text' id='lname' class='hi' name='lname'/></div>
+<div style="margin-top:50px;margin-left:50px;"><label class="3rdn">User Name</label>
+<input type='text' id='uname' class='hi' name='uname'/>
+<label style="margin-left:40%;">Password</label>
+<input type='password' id='pwd' class='hi' name='pwd'/></div>
+<div style="margin-top:50px;"><label style="margin-left:50px;">Confirm Password</label>
+<input type='password' id='cpwd' class='hi' name='cpwd'/>
+<label  style="margin-left:40%;">Branch</label>
+<select id='branch' name='branch' class="jj" style="margin-left:30px;padding:10px;color:#03bcf4;background-color:transparent;border:3px solid #03bcf4;border-radius:10px;">
+<option>Select</option>
+<option>CSE</option>
+<option>IT</option>
+<option>ECE</option>
+</select>
+</div>
+<div style="margin-top:50px;"><label style="margin-left:50px;">Roll number</label>
+<input type='text' id='rnum' class='hi' name='rnum'/>
+<label style="margin-left:40%;">Gender</label>
+<input type='radio' id='male' name='gender' /><label>Male</label>
+<input type='radio' id='female' name='gender'/><label >Female</label></div><div>
+<span><input type='submit' value='Register' onclick='return validate()' class="link"/></span>
+</div></div>
+<center><p id='p1'></p>
+<div><input type="text" id="selectedgender" name="selectedgender" style="background-color:transparent;border:transparent;font-size:30px;" /></div></center>
+</form>
+</body>
+</html>
+
